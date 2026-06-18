@@ -1,3 +1,3 @@
-module go-lang
+module go-prac
 
 go 1.26.4

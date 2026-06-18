@@ -1,3 +1,5 @@
+package main
+
 /* above is exact equivalent to c
 void UpdateName (User *r, char *newName) {
 	r->Name = newName;
@@ -45,8 +47,6 @@ to 90% of methods use pointer receivers because they allow you to modify data
 and avoid the performance cost of copying memory.
 */
 
-package main
-
 import (
 	"fmt"
 )
@@ -62,4 +62,13 @@ func (r *Human) UpdateName(Active bool) (string, int) {
 		fmt.Println("active user")
 	}
 	return r.Name, r.Age
+}
+
+func main() {
+	man := Human{
+		Name: "goodName",
+		Age:  100,
+	}
+	name, age := man.UpdateName(true)
+	fmt.Printf("%s %d\n", name, age)
 }

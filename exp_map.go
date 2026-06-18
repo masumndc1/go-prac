@@ -2,19 +2,16 @@ package main
 
 import (
 	"fmt"
+	"go-prac/shared"
 )
 
 func main() {
-	// 1. Using a map literal (with initial data)
-	userAge := map[string]int{
-		"Alice": 25,
-		"Bob":   30,
-	}
 
 	// 2. Using make() for an empty map (Ready to accept data)
 	scores := make(map[string]int)
 	scores["teamA"] = 10
 
+	var userAge = shared.UserAge
 	// if "Alice" in user_age:
 	age, exists := userAge["Alice"]
 
